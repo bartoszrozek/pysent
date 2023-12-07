@@ -1,0 +1,4 @@
+from pysent.aspect_annotators.extractors.aspect_extractor import AspectExtractor
+from pysent.aspect_annotators.extractors.spacy_extractor import SpacyExtractor
+from pysent.aspect_annotators.extractors.chatgpt_extractor import ChatGPTExtractor
+from pysent.aspect_annotators.extractors.pyabsa_extractor import PyabsaExtractor

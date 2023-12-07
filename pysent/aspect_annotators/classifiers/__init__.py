@@ -1,0 +1,3 @@
+from pysent.aspect_annotators.classifiers.aspect_classifer import AspectClassifier
+from pysent.aspect_annotators.classifiers.flair_classifier import FlairClassifier
+from pysent.aspect_annotators.classifiers.senti_classifier import SentiClassifier
