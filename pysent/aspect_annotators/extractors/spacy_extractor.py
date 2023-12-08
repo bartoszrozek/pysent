@@ -9,14 +9,14 @@ from pysent.data_structures import ExtractedAspect
 
 
 class SpacyExtractor(AspectExtractor):
-    def __init__(self, n_neighbors: int = 3, language="en"):
+    def __init__(self, n_neighbors: int = 4, language="en"):
         """Object constructor
 
         Parameters
         ----------
         n_neighbors : int, optional
             Number of surroding words to be taken while extracting context,
-            by default 3
+            by default 4
         language : str, optional
             Language to use, one of ['pl', 'en'], by default "en"
 
