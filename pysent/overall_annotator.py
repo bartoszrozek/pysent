@@ -55,6 +55,20 @@ class OverallAnotator:
     def test_annotator(
         self, texts: list[str], true_labels: list[str]
     ) -> OrdinaryResults:
+        """Test provided annotators with gold standard labels.
+
+        Parameters
+        ----------
+        texts : list[str]
+            List of texts to annotate
+        true_labels : list[str]
+            True sentiment labels
+
+        Returns
+        -------
+        OrdinaryResults
+            Results in form of OrdinaryResults
+        """
         predicted_labels = self.annotate(texts)
         predicted_labels = [
             predicted_label.label.lower() for predicted_label in predicted_labels
@@ -63,7 +77,28 @@ class OverallAnotator:
         results = self.calculate_results(predicted_labels, true_labels)
         return results
 
-    def calculate_results(self, true_labels, predicted_labels) -> OrdinaryResults:
+    def calculate_results(
+        self, true_labels: list[str], predicted_labels: list[str]
+    ) -> OrdinaryResults:
+        """Calculate results for predicted labels and true labels
+
+        Parameters
+        ----------
+        true_labels : list[str]
+            True sentiment labels
+        predicted_labels : list[str]
+            Predicted sentiment labels
+
+        Returns
+        -------
+        OrdinaryResults
+            Results in form of OrdinaryResults
+
+        Raises
+        ------
+        ValueError
+            Error is lengths of list are different
+        """
         if len(true_labels) != len(predicted_labels):
             raise ValueError(
                 "Lenghts of true_labels and predicted_labels must be equal!"
