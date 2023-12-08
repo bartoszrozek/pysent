@@ -39,14 +39,14 @@ class ChatGPTExtractor(AspectExtractor):
                 Keep the aspects concise (no more than 3 words). 
                 Besides the aspect, provide the chunk of the text that describes that aspect. Chunks should sum up to the entire sentence.
                 If you are returning one aspect, use the format:
-                Aspect: <aspect you suggest>
+                Aspect: <aspect you suggest, exact words from text, do not change its form>
                 Chunk: <chunk of the Text about the aspect>
 
                 If you are returning multiple aspects, use the format:
-                Aspect: <aspect you suggest>
+                Aspect: <aspect you suggest, exact words from text, do not change its form>
                 Chunk: <piece of the Text about the aspect>
 
-                Aspect: <aspect you suggest>
+                Aspect: <aspect you suggest, exact words from text, do not change its form>
                 Chunk: <piece of the Text about the aspect>
                 ... and so on.
                 Don't repeat the text or provide any additional output. Answer should be in the same language as the input.

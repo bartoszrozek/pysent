@@ -39,7 +39,7 @@ class ChatGPTExtrassifier(AspectExtrassifier):
                 {
                     "role": "system",
                     "content": f"""For text below provide me an aspect based sentiment analysis and score in the format:
-                    Aspect: <aspect you suggest>
+                    Aspect: <aspect you suggest, exact words from text, do not change its form>
                     Label: <label you suggest>
                     Score: <score you suggest>
 
