@@ -169,11 +169,11 @@ class AspectAnotator:
 
         for pred_an, true_an in zip(predicted_annotations, true_annotations):
             for pred in pred_an.aspects:
-                pred_aspect = pred.text
+                pred_aspect = pred.text.lower()
                 pred_sentiment = pred.label.lower()
                 matching_aspect = False
                 for true_ in true_an.aspects:
-                    true_aspect = true_.text
+                    true_aspect = true_.text.lower()
                     true_sentiment = true_.label.lower()
                     if pred_aspect == true_aspect:
                         if pred_sentiment == true_sentiment:
@@ -184,7 +184,7 @@ class AspectAnotator:
                         break
                 if not matching_aspect:
                     for true_ in true_an.aspects:
-                        true_aspect = true_.text
+                        true_aspect = true_.text.lower()
                         true_sentiment = true_.label.lower()
                         if true_aspect in pred_aspect or pred_aspect in true_aspect:
                             if pred_sentiment == true_sentiment:
