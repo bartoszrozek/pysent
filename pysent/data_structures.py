@@ -276,3 +276,16 @@ def concat_results(
 
     data_frames = [result.to_data_frame() for result in results]
     return pd.concat(data_frames)
+
+
+def transform_output(
+    reviews: list[str], annotations : list[AspectAnnotation],
+) -> pd.DataFrame:
+    df = pd.DataFrame()
+    for review_id in range(len(reviews)):
+        for annotation_id in range(len(annotations[review_id].aspects)):
+            df_part = pd.DataFrame({"review": [reviews[review_id]], 
+                                    "aspect": [annotations[review_id].aspects[annotation_id].text],
+                                    "label": [annotations[review_id].aspects[annotation_id].label.lower()]})
+            df = pd.concat([df, df_part])
+    return df.reset_index(drop=True)
