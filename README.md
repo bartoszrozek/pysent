@@ -4,7 +4,7 @@ Python package with wrappers for different methods of sentiment and sentiment ba
 
 ## Documentation
 
-The full documentation is available at GCP bucket[]
+The full documentation is available at [GCP bucket](https://storage.googleapis.com/nlp_bucket420/html/index.html?fbclid=IwAR0AyYC11tef7D4MWJXs5mKOetqCiekaooKSrjSgS2Egslzwie6L3SsRb9w)
 
 ## Installation
 
